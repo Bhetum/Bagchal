@@ -1,10 +1,8 @@
-<script>
-	import { GradientHeading } from '@skeletonlabs/skeleton';
-	import Theme from '$lib/ThemeToggle.svelte';
+<script lang="ts">
+	let today = new Date();
+	console.dir(today);
 </script>
 
-<GradientHeading tag="h1" direction="bg-gradient-to-br" from="from-primary-500" to="to-accent-500">
-	Homepage
-</GradientHeading>
-
-<Theme />
+<div class="grid place-items-center m-10">
+	<div class="w-[500px] h-[500px] bg-primary-500" />
+</div>

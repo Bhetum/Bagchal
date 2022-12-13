@@ -112,18 +112,18 @@
 </button>
 
 <!-- simple toggle version -->
-<button
+<!-- <button
 	class="{dark
 		? 'focus:ring-gray-400 ring-offset-gray-700'
 		: 'focus:ring-yellow-400 ring-offset-white'} border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 m-4"
 	class:hidden
 	on:click={toggle}
 >
-	<!-- moon icon -->
+	moon icon
 	<svg class="h-5 w-5 text-gray-400" class:hidden={!dark} viewBox="0 0 20 20" fill="currentColor">
 		<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
 	</svg>
-	<!-- sun icon -->
+	sun icon
 	<svg class="h-5 w-5 text-yellow-400" class:hidden={dark} viewBox="0 0 20 20" fill="currentColor">
 		<path
 			fill-rule="evenodd"
@@ -131,10 +131,10 @@
 			clip-rule="evenodd"
 		/>
 	</svg>
-</button>
+</button> -->
 
-<style global type="postcss">
+<!-- <style global type="postcss">
 	body {
 		@apply dark:bg-slate-800;
 	}
-</style>
+</style> -->

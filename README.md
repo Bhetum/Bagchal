@@ -22,8 +22,7 @@
 - [ ] Hover effects
 - [ ] Add animation when piece move 
 - [ ] Make tiger and goat svg look good
-- [ ] Have dark and light theme
-- [ ] 
+- [x] Have dark and light theme
 
 **Nice to have**
 - [ ] Create a bot to play against player using min-max algorithm

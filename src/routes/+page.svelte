@@ -1,6 +1,4 @@
 <script lang="ts">
-	let today = new Date();
-	console.dir(today);
 </script>
 
 <div class="grid place-items-center m-10">

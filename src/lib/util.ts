@@ -10,4 +10,14 @@ export enum State {
 	Won
 }
 
+export function getEmptyBoard() {
+	return [
+		[Move.Tiger, Move.Empty, Move.Empty, Move.Empty, Move.Tiger],
+		[Move.Empty, Move.Empty, Move.Empty, Move.Empty, Move.Empty],
+		[Move.Empty, Move.Empty, Move.Empty, Move.Empty, Move.Empty],
+		[Move.Empty, Move.Empty, Move.Empty, Move.Empty, Move.Empty],
+		[Move.Tiger, Move.Empty, Move.Empty, Move.Empty, Move.Tiger]
+	];
+}
+
 export function checkWinner(board: Move[][]) {}

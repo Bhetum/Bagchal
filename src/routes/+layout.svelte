@@ -7,6 +7,4 @@
 <!-- Page Content Slot -->
 <Header />
 
-<main class="">
-	<slot />
-</main>
+<slot />

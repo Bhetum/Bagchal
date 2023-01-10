@@ -3,15 +3,24 @@
 	import Icon from '$lib/Icon.svelte';
 	import EmptyCell from '$lib/EmptyCell.svelte';
 	import { tick } from 'svelte';
-
+	import Board from '$lib/Board.svelte';
 	let board = getEmptyBoard();
 	let state = State.Playing;
 	let turn = Move.Goat;
 	let boardEl: HTMLElement;
+	let goatNum = 20;
 
 	function place(row: number, col: number) {
 		board[row][col] = turn;
-		turn = turn === Move.Goat ? Move.Tiger : Move.Goat;
+		if (turn === Move.Goat) {
+			if (goatNum === 0) {
+				alert('no more goat');
+			}
+			turn = Move.Tiger;
+			goatNum--;
+		} else {
+			turn = Move.Goat;
+		}
 	}
 
 	$: winner = checkWinner(board);
@@ -21,11 +30,13 @@
 	}
 </script>
 
-<main class="h-screen bg-gray-100 dark:bg-gray-700">
+<!-- <Board /> -->
+
+<div class="h-screen bg-gray-100 dark:bg-gray-700 flex flex-col gap-10 justify-center items-center">
 	<div class="board bg-gray-700" bind:this={boardEl}>
 		{#each board as row, r}
 			{#each row as col, c}
-				<div class="w-10 h-10 aspect-square bg-white">
+				<div class="w-10 h-10 aspect-square bg-gray-100">
 					{#if col !== Move.Empty}
 						<Icon move={col} />
 					{:else}
@@ -37,7 +48,11 @@
 			{/each}
 		{/each}
 	</div>
-</main>
+	<button
+		class="bg-gray-700 w-20 p-2 text-gray-100 dark:text-gray-700 dark:bg-gray-100"
+		on:click={reset}>Reset</button
+	>
+</div>
 
 <style>
 	.board {
